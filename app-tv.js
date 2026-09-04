@@ -19,8 +19,12 @@
     wrap.appendChild(title);
 
     var sub = document.createElement("p");
-    sub.textContent = "To hold. Otte sager. Én fødselsdagsgave, der venter på at blive fundet.";
+    sub.textContent = "Fire hold. Otte sager. Én fødselsdagsgave, der venter på at blive fundet.";
     wrap.appendChild(sub);
+
+    var rules = document.createElement("p");
+    rules.textContent = "Ingen koder er, hvad de ser ud til at være: nogle skal regnes ud, andre skal læses omvendt. Brug hovedet -- eller et hint, hvis I sidder fast.";
+    wrap.appendChild(rules);
 
     var btn = document.createElement("button");
     btn.className = "btn btn-start";
