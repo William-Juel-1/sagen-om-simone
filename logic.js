@@ -8,7 +8,7 @@
   var HINT_PENALTY_MS = 3 * 60 * 1000;
 
   function normalizeCode(input) {
-    return String(input).trim().toUpperCase();
+    return String(input).replace(/\s+/g, "").toUpperCase();
   }
 
   function checkCode(sag, input) {

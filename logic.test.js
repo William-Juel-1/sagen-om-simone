@@ -15,6 +15,11 @@ test("normalizeCode trims and uppercases", () => {
   assert.strictEqual(Logic.normalizeCode("  banan \n"), "BANAN");
 });
 
+test("normalizeCode also strips internal whitespace", () => {
+  assert.strictEqual(Logic.normalizeCode("A S 4"), "AS4");
+  assert.strictEqual(Logic.normalizeCode(" as  4 "), "AS4");
+});
+
 test("checkCode matches regardless of case/whitespace", () => {
   const sag = { kode: "banan" };
   assert.strictEqual(Logic.checkCode(sag, " BANAN "), true);

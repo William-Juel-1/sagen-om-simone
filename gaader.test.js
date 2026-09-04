@@ -33,7 +33,7 @@ test("sag ids are unique and sequential from 1 to 8", () => {
 });
 
 test("FINALE has required non-empty fields and id 9", () => {
-  const requiredFields = ["id", "titel", "tekst", "kode", "hint", "hilsen", "fysiskHenvisning"];
+  const requiredFields = ["id", "titel", "tekst", "kode", "hint", "hilsen"];
   requiredFields.forEach((field) => {
     assert.ok(
       FINALE[field] !== undefined && FINALE[field] !== "",

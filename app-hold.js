@@ -1,8 +1,9 @@
 ﻿(function () {
   var params = new URLSearchParams(window.location.search);
-  var team = params.get("team");
-  var teamLabel = team === "2" ? "Hold 2" : "Hold 1";
-  var storageKey = "sagen-om-simone:team:" + (team === "2" ? "2" : "1");
+  var validTeams = ["1", "2", "3", "4"];
+  var team = validTeams.indexOf(params.get("team")) !== -1 ? params.get("team") : "1";
+  var teamLabel = "Hold " + team;
+  var storageKey = "sagen-om-simone:team:" + team;
 
   var root = document.getElementById("app");
   var state = loadState();
@@ -196,10 +197,12 @@
       " (inkl. " + hintCount + (hintCount === 1 ? " hint" : " hints") + ")";
     card.appendChild(stats);
 
-    var henvisning = document.createElement("p");
-    henvisning.className = "physical-pointer";
-    henvisning.textContent = Gaader.FINALE.fysiskHenvisning;
-    card.appendChild(henvisning);
+    if (Gaader.FINALE.fysiskHenvisning) {
+      var henvisning = document.createElement("p");
+      henvisning.className = "physical-pointer";
+      henvisning.textContent = Gaader.FINALE.fysiskHenvisning;
+      card.appendChild(henvisning);
+    }
 
     root.appendChild(card);
   }

@@ -11,7 +11,7 @@
       id: 1,
       rum: "Entré",
       titel: "Sagen om den forsvundne flyttedag",
-      tekst: "Vidne nr. 1 rapporterer: Der har stået en flyttekasse så længe i lejligheden, at den er begyndt at samle støv af arkæologisk værdi. Spor den til stedet, hvor sko og overtøj først mødte de nye gulve for halvandet år siden.",
+      tekst: "Vidne nr. 1 rapporterer: Der har stået en flyttekasse så længe i lejligheden, at den er begyndt at samle støv af arkæologisk værdi. Spor den til stedet, hvor sko og overtøj først mødte de nye gulve for 2,5 år siden.",
       // Gemmested-forslag: en flyttekasse eller kort ved entrémøblet.
       kode: "ESSAK",
       hint: "Beviset er mærket med et ord for det du pakker flyttegods i -- men skrevet bagfra.",
@@ -41,7 +41,7 @@
       tekst: "Mistænkte hævder at være hærdet af utallige fugleture med drengene hver lørdag. Ingen har nogensinde set et foto af en fugl -- kun tomme øl-dåser og ét lille shot-glas, der åbenbart er nok til at gøre ham mistænkeligt 'tøset'.",
       // Gemmested-forslag: ved en gummiand (fugl-ordspil).
       kode: "TØSEDRENG",
-      hint: "Hvad kalder man en mand der bliver fuld af ét snapseglas?",
+      hint: "Hvad kalder man en mand der bliver fuld af små snapseglas?",
     },
     {
       id: 5,
@@ -56,7 +56,7 @@
       id: 6,
       rum: "Stue (2. sted)",
       titel: "Sagen om tilskuerskrækken",
-      tekst: "Mistænkte spillede engang lovende håndbold -- lige indtil nogen så på hende. Nu lever hun under konstant overvågning af to meget kritiske tilskuere med kodenavnene Arthur og Sophia, som følger hende overalt fra samme hjørne, hvor familiens legetøj samler støv mellem brug.",
+      tekst: "Mistænkte spillede engang lovende håndbold -- lige indtil nogen så på. Nu lever hun under konstant overvågning af to meget kritiske tilskuere med kodenavnene ruhtra og aihpos, som følger hende overalt fra samme hjørne, hvor familiens legetøj samler støv mellem brug.",
       // Gemmested-forslag: ved en fotoramme eller legetøjskurv.
       kode: "AS4",
       hint: "A for Arthur, S for Sophia, og 1 + 3 år tilsammen.",
@@ -85,10 +85,9 @@
     id: 9,
     titel: "Sagen er ved at være opklaret",
     tekst: "I har fulgt sporet gennem hele lejligheden. Nu mangler kun én ting: koden der binder hele sagen sammen. Hint: det er kælenavnet fra skolegården, plus alderen hun fejrer i dag.",
-    kode: "KROLLE29",
+    kode: "KRØLLE29",
     hint: "Krølle + 29.",
-    hilsen: "TILLYKKE SIMONE! Sagen er hermed officielt opklaret. Og den bedste nyhed af alle: til næste år er I én mere til at fejre den her dag.",
-    fysiskHenvisning: "Gå ud i køkkenet og tjek køleskabet -- der venter noget sødt.",
+    hilsen: "TILLYKKE! Sagen er hermed officielt opklaret. Og den bedste nyhed af alle: til næste år er I én mere til at fejre den her dag.",
   };
 
   return { SAGER: SAGER, FINALE: FINALE };
