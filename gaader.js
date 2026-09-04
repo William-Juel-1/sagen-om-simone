@@ -11,10 +11,10 @@
       id: 1,
       rum: "Entré",
       titel: "Sagen om den forsvundne flyttedag",
-      tekst: "Vidne nr. 1 rapporterer: Der har stået en flyttekasse så længe i lejligheden, at den er begyndt at samle støv af arkæologisk værdi. Spor den til stedet, hvor sko og overtøj først mødte de nye gulve for 2,5 år siden.",
+      tekst: "Vidne nr. 1 rapporterer: Der har stået et møbel så længe i lejligheden, at den er begyndt at samle støv af arkæologisk værdi. Spor den til stedet, hvor sko først mødte de nye gulve for 2,5 år siden.",
       // Gemmested-forslag: en flyttekasse eller kort ved entrémøblet.
-      kode: "ESSAK",
-      hint: "Beviset er mærket med et ord for det du pakker flyttegods i -- men skrevet bagfra.",
+      kode: "28",
+      hint: "Beviset er mærket med antallet af flyttegods i og ved skoreolen.",
     },
     {
       id: 2,
@@ -47,7 +47,7 @@
       id: 5,
       rum: "Soveværelse",
       titel: "Sagen om den ukuelige sortbælte",
-      tekst: "Mistænkte er 4. dans sortbælte i Shotokan og kan fælde enhver modstander med ét spark -- alligevel har hun to gange tabt kampen mod livløse genstande (en stolpe og en gokart), begge gange med sine briller som tabsoffer. Snart venter hendes hidtil sværeste modstander -- og den sover allerede tættest på hendes hjerte om natten.",
+      tekst: "Det står i politirapporten, at den Mistænkte er 4. dan sortbælte i Shotokan og kan fælde enhver modstander med ét spark -- alligevel har hun og hendes briller to gange tabt kampen mod livløse genstande (en stolpe og en gokart). Snart venter hendes hidtil sværeste modstander -- og den sover allerede tættest på hendes hjerte om natten.",
       // Gemmested-forslag: ved skabet eller natbordet.
       kode: "6",
       hint: "4. dan + 2 ødelagte briller = ?",
@@ -65,28 +65,28 @@
       id: 7,
       rum: "Entré/kontor",
       titel: "Sagen om den ufuldendte joke",
-      tekst: "Mistænkte er nyudklækket cand.it. og elsker en god joke, men når sjældent pointen. Sidst kendte citat, efter at have væltet et glas mælk ud over bordet: 'Jeg er altid så uheldig.' Spor ham til stedet, hvor kablerne samler sig, og hele husets internet holdes i live.",
+      tekst: "Mistænkte er nyudklækket cand.it., er lidt OMVENDT, og elsker en god joke, men når sjældent pointen. Sidst kendte citat, efter at have væltet et glas mælk ud over bordet: 'Jeg er altid så uheldig.' Spor ham til stedet, hvor kablerne samler sig, og hele husets internet holdes i live.",
       // Gemmested-forslag: ved en laptop eller router.
-      kode: "52",
-      hint: "25 baglæns.",
+      kode: "NOIPROKS",
+      hint: "Kan du dine stjernetegn baglæns?",
     },
     {
       id: 8,
       rum: "Soveværelse/altan",
       titel: "Sagen om den mest reparerede mistænkte",
-      tekst: "Mistænkte er under oplæring i at passe kærligt på andre mennesker -- hvilket er belejligt, for hun selv er familiens mest reparerede medlem med flere operationer end de fleste. På skadestuen er hun kendt for én ting: hun tåler overhovedet ikke morfin. Spor sagen til stedet, hvor hun bruger flest minutter foran spejlet, inden hun stormer ud for at erobre dagen.",
+      tekst: "Mistænkte er under oplæring i at passe kærligt på andre mennesker -- hvilket er belejligt, for det står i lægejournalen, at hun selv er familiens mest reparerede medlem med flere operationer end de fleste. På skadestuen er hun kendt for én ting: hun tåler overhovedet ikke morfin. Spor sagen til stedet, hvor hun bruger flest minutter foran spejlet, inden hun stormer ud for at erobre dagen.",
       // Gemmested-forslag: ved et spejl eller vindueskarm.
-      kode: "21",
-      hint: "17 år + 4 søskende = ?",
+      kode: "Bella500",
+      hint: "Bogreol",
     },
   ];
 
   var FINALE = {
     id: 9,
     titel: "Sagen er ved at være opklaret",
-    tekst: "I har fulgt sporet gennem hele lejligheden. Nu mangler kun én ting: koden der binder hele sagen sammen. Hint: det er kælenavnet fra skolegården, plus alderen hun fejrer i dag.",
-    kode: "KRØLLE29",
-    hint: "Krølle + 29.",
+    tekst: "I har fulgt sporet gennem hele lejligheden. Nu mangler kun én ting: koden der binder hele sagen sammen. Hint: det er drenge-kælenavnet fra skolegården, plus alderen hun fejrer i dag.",
+    kode: "BOB29",
+    hint: "BOB + 29.",
     hilsen: "TILLYKKE! Sagen er hermed officielt opklaret. Og den bedste nyhed af alle: til næste år er I én mere til at fejre den her dag.",
   };
 

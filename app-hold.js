@@ -32,6 +32,8 @@
     header.textContent = teamLabel;
     root.appendChild(header);
 
+    root.appendChild(renderResetButton());
+
     if (!state.startedAt) {
       renderStartScreen();
       return;
@@ -53,6 +55,24 @@
     } else {
       renderFinaleScreen();
     }
+  }
+
+  function renderResetButton() {
+    var reset = document.createElement("button");
+    reset.className = "btn btn-hint";
+    reset.textContent = "Nulstil hold (start forfra)";
+    reset.addEventListener("click", function () {
+      if (window.confirm("Nulstil " + teamLabel + "s fremskridt og tid? Dette kan ikke fortrydes.")) {
+        localStorage.removeItem(storageKey);
+        state = Logic.createInitialState();
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+        }
+        render();
+      }
+    });
+    return reset;
   }
 
   function updateTimer() {

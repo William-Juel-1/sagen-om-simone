@@ -15,11 +15,11 @@
     wrap.className = "tv-screen tv-intro";
 
     var title = document.createElement("h1");
-    title.textContent = "SAGEN OM SIMONES 29 ÅR";
+    title.textContent = "SAGEN OM FAMILIEN";
     wrap.appendChild(title);
 
     var sub = document.createElement("p");
-    sub.textContent = "Fire hold. Otte sager. Én fødselsdagsgave, der venter på at blive fundet.";
+    sub.textContent = "Fire hold. Otte sager. Én stor hemmelighed, der venter på at blive afsløret.";
     wrap.appendChild(sub);
 
     var rules = document.createElement("p");
