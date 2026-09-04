@@ -82,6 +82,8 @@
   }
 
   function renderStartScreen() {
+    root.appendChild(Decor.createBloodDripBar());
+
     var rules = document.createElement("p");
     rules.className = "hint-text";
     rules.textContent = "Ingen koder er, hvad de ser ud til at være: nogle skal regnes ud, andre skal læses omvendt. Brug hovedet -- eller et hint, hvis I sidder fast.";
@@ -151,6 +153,7 @@
   function renderSag(sag) {
     var card = document.createElement("div");
     card.className = "case-card";
+    card.appendChild(Decor.createBloodDripBar());
 
     var titel = document.createElement("h2");
     titel.textContent = "Sag " + sag.id + ": " + sag.titel;
@@ -175,6 +178,7 @@
     var sag = Gaader.FINALE;
     var card = document.createElement("div");
     card.className = "case-card finale-card";
+    card.appendChild(Decor.createBloodDripBar());
 
     var titel = document.createElement("h2");
     titel.textContent = sag.titel;
@@ -201,6 +205,7 @@
       clearInterval(timerInterval);
       timerInterval = null;
     }
+    Decor.renderBalloons();
     var card = document.createElement("div");
     card.className = "case-card finale-solved";
 

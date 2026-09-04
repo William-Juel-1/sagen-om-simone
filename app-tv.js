@@ -13,6 +13,7 @@
   function renderIntro() {
     var wrap = document.createElement("div");
     wrap.className = "tv-screen tv-intro";
+    wrap.appendChild(Decor.createBloodDripBar());
 
     var title = document.createElement("h1");
     title.textContent = "SAGEN OM FAMILIEN";
@@ -41,6 +42,7 @@
   function renderCountdown() {
     var wrap = document.createElement("div");
     wrap.className = "tv-screen tv-countdown";
+    wrap.appendChild(Decor.createBloodDripBar());
     var count = document.createElement("div");
     count.className = "countdown-number";
     wrap.appendChild(count);
@@ -63,6 +65,7 @@
   function renderAmbient() {
     var wrap = document.createElement("div");
     wrap.className = "tv-screen tv-ambient";
+    wrap.appendChild(Decor.createBloodDripBar());
 
     var title = document.createElement("h1");
     title.textContent = "EFTERFORSKNINGEN ER I GANG";
@@ -111,6 +114,7 @@
   }
 
   function renderFinale() {
+    Decor.renderBalloons();
     var wrap = document.createElement("div");
     wrap.className = "tv-screen tv-finale";
 
