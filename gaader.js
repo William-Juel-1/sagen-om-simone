@@ -11,43 +11,43 @@
       id: 1,
       rum: "Entré",
       titel: "Sagen om den forsvundne flyttedag",
-      tekst: "Vidne nr. 1 rapporterer: Der har stået en flyttekasse i denne entré så længe, at den er begyndt at samle støv af arkæologisk værdi. Find den sidste rest af flytningen, der aldrig blev pakket helt ud.",
+      tekst: "Vidne nr. 1 rapporterer: Der har stået en flyttekasse så længe i lejligheden, at den er begyndt at samle støv af arkæologisk værdi. Spor den til stedet, hvor sko og overtøj først mødte de nye gulve for halvandet år siden.",
       // Gemmested-forslag: en flyttekasse eller kort ved entrémøblet.
       kode: "ESSAK",
       hint: "Beviset er mærket med et ord for det du pakker flyttegods i -- men skrevet bagfra.",
     },
     {
       id: 2,
-      rum: "Stue",
+      rum: "Find selv ud af det",
       titel: "Sagen om det forsvundne kunstværk",
-      tekst: "Et 'uvurderligt kunstværk' er forsvundet fra Kunsthal Aarhus' samling. Mistænkte hævder det blot var en banan tapet til væggen -- men Kunsthallens egen Online Manager ved bedre.",
+      tekst: "Et 'uvurderligt kunstværk' er forsvundet fra Kunsthal Aarhus' samling. Vi skal bruge dets navn for at kunne lokalisere det. Mistænkte hævder det blot var en masse hænder tapet til væggen -- men Kunsthallens egen Online Manager ved bedre.",
       // Gemmested-forslag: bag en plakat/billedramme i stuen.
-      kode: "BANAN",
-      hint: "Tænk på den gule frugt, der engang solgte for en formue som 'kunst'.",
+      kode: "HÅND I HÅND",
+      hint: "Navnet er skrevet nederst til venstre på billede i entréen.",
     },
     {
       id: 3,
       rum: "Køkken",
       titel: "Sagen om borddanseren",
-      tekst: "Mistænkte har opdraget fire individer til at overleve barndommen uden at miste sin sans for humor. Til gengæld er festivalens borde aldrig helt sikre, når hun finder rytmen. Læg antallet af hendes børn sammen med den dag i juli hun selv blev født.",
+      tekst: "Mistænkte har opdraget fire individer til at overleve barndommen uden at miste sin sans for humor. Til gengæld er festivalens borde eller ribben aldrig helt sikre, når hun finder rytmen.",
       // Gemmested-forslag: ved kaffemaskinen eller krydderihylden.
-      kode: "35",
-      hint: "4 børn + fødselsdag den 31. = ?",
+      kode: "96",
+      hint: "28 + 27 + 24 + 17 = ?",
     },
     {
       id: 4,
       rum: "Badeværelse",
       titel: "Sagen om det vandtætte alibi",
-      tekst: "Mistænkte hævder at være hærdet af utallige fugleture med drengene hver lørdag. Ingen har nogensinde set et foto af en fugl -- kun tomme øl-dåser og ét lille glas, der åbenbart er nok til at gøre ham mistænkeligt 'tøset'.",
+      tekst: "Mistænkte hævder at være hærdet af utallige fugleture med drengene hver lørdag. Ingen har nogensinde set et foto af en fugl -- kun tomme øl-dåser og ét lille shot-glas, der åbenbart er nok til at gøre ham mistænkeligt 'tøset'.",
       // Gemmested-forslag: ved en gummiand (fugl-ordspil).
       kode: "TØSEDRENG",
-      hint: "Hvad kalder man en mand der bliver blød i knæene af ét snapseglas?",
+      hint: "Hvad kalder man en mand der bliver fuld af ét snapseglas?",
     },
     {
       id: 5,
       rum: "Soveværelse",
       titel: "Sagen om den ukuelige sortbælte",
-      tekst: "Mistænkte er 4. dans sortbælte i Shotokan og kan fælde enhver modstander med ét spark -- alligevel har hun to gange tabt kampen mod livløse genstande (en stolpe og en gokart), begge gange med sine briller som tabsoffer. Læg hendes dan-grad sammen med antallet af ødelagte brilleglas.",
+      tekst: "Mistænkte er 4. dans sortbælte i Shotokan og kan fælde enhver modstander med ét spark -- alligevel har hun to gange tabt kampen mod livløse genstande (en stolpe og en gokart), begge gange med sine briller som tabsoffer. Snart venter hendes hidtil sværeste modstander -- og den sover allerede tættest på hendes hjerte om natten.",
       // Gemmested-forslag: ved skabet eller natbordet.
       kode: "6",
       hint: "4. dan + 2 ødelagte briller = ?",
@@ -56,7 +56,7 @@
       id: 6,
       rum: "Stue (2. sted)",
       titel: "Sagen om tilskuerskrækken",
-      tekst: "Mistænkte spillede engang lovende håndbold -- lige indtil nogen så på hende. Nu lever hun under konstant overvågning af to meget kritiske tilskuere med kodenavnene Arthur og Sophia. Kombiner de to tilskueres forbogstaver med deres samlede alder.",
+      tekst: "Mistænkte spillede engang lovende håndbold -- lige indtil nogen så på hende. Nu lever hun under konstant overvågning af to meget kritiske tilskuere med kodenavnene Arthur og Sophia, som følger hende overalt fra samme hjørne, hvor familiens legetøj samler støv mellem brug.",
       // Gemmested-forslag: ved en fotoramme eller legetøjskurv.
       kode: "AS4",
       hint: "A for Arthur, S for Sophia, og 1 + 3 år tilsammen.",
@@ -65,7 +65,7 @@
       id: 7,
       rum: "Entré/kontor",
       titel: "Sagen om den ufuldendte joke",
-      tekst: "Mistænkte er nyudklækket cand.it. og elsker en god joke, men når sjældent pointen. Sidst kendte citat, efter at have væltet et glas mælk ud over bordet: 'Jeg er altid så uheldig.' Til efteråret fylder han 25 -- skriv det tal bagfra.",
+      tekst: "Mistænkte er nyudklækket cand.it. og elsker en god joke, men når sjældent pointen. Sidst kendte citat, efter at have væltet et glas mælk ud over bordet: 'Jeg er altid så uheldig.' Spor ham til stedet, hvor kablerne samler sig, og hele husets internet holdes i live.",
       // Gemmested-forslag: ved en laptop eller router.
       kode: "52",
       hint: "25 baglæns.",
@@ -74,7 +74,7 @@
       id: 8,
       rum: "Soveværelse/altan",
       titel: "Sagen om den mest reparerede mistænkte",
-      tekst: "Mistænkte er under oplæring i at passe kærligt på andre mennesker -- hvilket er belejligt, for hun selv er familiens mest reparerede medlem med flere operationer end de fleste. På skadestuen er hun kendt for én ting: hun tåler overhovedet ikke morfin. Læg hendes alder sammen med antallet af søskende i familien.",
+      tekst: "Mistænkte er under oplæring i at passe kærligt på andre mennesker -- hvilket er belejligt, for hun selv er familiens mest reparerede medlem med flere operationer end de fleste. På skadestuen er hun kendt for én ting: hun tåler overhovedet ikke morfin. Spor sagen til stedet, hvor hun bruger flest minutter foran spejlet, inden hun stormer ud for at erobre dagen.",
       // Gemmested-forslag: ved et spejl eller vindueskarm.
       kode: "21",
       hint: "17 år + 4 søskende = ?",

@@ -130,11 +130,6 @@
     titel.textContent = "Sag " + sag.id + ": " + sag.titel;
     card.appendChild(titel);
 
-    var rum = document.createElement("div");
-    rum.className = "case-room";
-    rum.textContent = sag.rum;
-    card.appendChild(rum);
-
     var tekst = document.createElement("p");
     tekst.textContent = sag.tekst;
     card.appendChild(tekst);
