@@ -1,0 +1,241 @@
+﻿(function () {
+  var params = new URLSearchParams(window.location.search);
+  var validTeams = ["1", "2", "3", "4"];
+  var team = validTeams.indexOf(params.get("team")) !== -1 ? params.get("team") : "1";
+  var teamLabel = "Hold " + team;
+  var storageKey = "sagen-om-simone:team:" + team;
+
+  var root = document.getElementById("app");
+  var state = loadState();
+  var timerInterval = null;
+
+  function loadState() {
+    var raw = localStorage.getItem(storageKey);
+    if (!raw) return Logic.createInitialState();
+    try {
+      return JSON.parse(raw);
+    } catch (e) {
+      return Logic.createInitialState();
+    }
+  }
+
+  function saveState(newState) {
+    state = newState;
+    localStorage.setItem(storageKey, JSON.stringify(state));
+  }
+
+  function render() {
+    root.innerHTML = "";
+
+    var header = document.createElement("div");
+    header.className = "team-header";
+    header.textContent = teamLabel;
+    root.appendChild(header);
+
+    root.appendChild(renderResetButton());
+
+    if (!state.startedAt) {
+      renderStartScreen();
+      return;
+    }
+
+    var timerEl = document.createElement("div");
+    timerEl.className = "timer";
+    timerEl.id = "timer";
+    root.appendChild(timerEl);
+    if (timerInterval) clearInterval(timerInterval);
+    timerInterval = setInterval(updateTimer, 1000);
+    updateTimer();
+
+    if (!Logic.allSolved(state, Gaader.SAGER)) {
+      var idx = Logic.nextUnsolvedIndex(state, Gaader.SAGER);
+      renderSag(Gaader.SAGER[idx]);
+    } else if (!Logic.isSolved(state, Gaader.FINALE.id)) {
+      renderFinalePrompt();
+    } else {
+      renderFinaleScreen();
+    }
+  }
+
+  function renderResetButton() {
+    var reset = document.createElement("button");
+    reset.className = "btn btn-hint";
+    reset.textContent = "Nulstil hold (start forfra)";
+    reset.addEventListener("click", function () {
+      if (window.confirm("Nulstil " + teamLabel + "s fremskridt og tid? Dette kan ikke fortrydes.")) {
+        localStorage.removeItem(storageKey);
+        state = Logic.createInitialState();
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+        }
+        render();
+      }
+    });
+    return reset;
+  }
+
+  function updateTimer() {
+    var timerEl = document.getElementById("timer");
+    if (!timerEl) return;
+    timerEl.textContent = Logic.formatDuration(Logic.elapsedMs(state, Date.now()));
+  }
+
+  function renderStartScreen() {
+    root.appendChild(Decor.createBloodDripBar());
+
+    var rules = document.createElement("p");
+    rules.className = "hint-text";
+    rules.textContent = "Ingen koder er, hvad de ser ud til at være: nogle skal regnes ud, andre skal læses omvendt. Brug hovedet -- eller et hint, hvis I sidder fast.";
+    root.appendChild(rules);
+
+    var btn = document.createElement("button");
+    btn.className = "btn btn-start";
+    btn.textContent = "Start efterforskningen";
+    btn.addEventListener("click", function () {
+      saveState(Logic.startState(state));
+      render();
+    });
+    root.appendChild(btn);
+  }
+
+  function renderCodeForm(sag, onCorrect) {
+    var form = document.createElement("form");
+    form.className = "code-form";
+
+    var input = document.createElement("input");
+    input.type = "text";
+    input.placeholder = "Indtast koden";
+    input.autocomplete = "off";
+    form.appendChild(input);
+
+    var submit = document.createElement("button");
+    submit.type = "submit";
+    submit.className = "btn";
+    submit.textContent = "Løs sagen";
+    form.appendChild(submit);
+
+    var feedback = document.createElement("div");
+    feedback.className = "feedback";
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (Logic.checkCode(sag, input.value)) {
+        onCorrect();
+      } else {
+        feedback.textContent = "Forkert kode — prøv igen.";
+        input.value = "";
+        input.focus();
+      }
+    });
+
+    return { form: form, feedback: feedback };
+  }
+
+  function renderHintBlock(sag) {
+    var hintUsed = state.hintsUsed.indexOf(sag.id) !== -1;
+    if (hintUsed) {
+      var hintText = document.createElement("p");
+      hintText.className = "hint-text";
+      hintText.textContent = "Hint: " + sag.hint;
+      return hintText;
+    }
+    var hintBtn = document.createElement("button");
+    hintBtn.className = "btn btn-hint";
+    hintBtn.textContent = "Få hint (+3 min)";
+    hintBtn.addEventListener("click", function () {
+      saveState(Logic.useHint(state, sag.id));
+      render();
+    });
+    return hintBtn;
+  }
+
+  function renderSag(sag) {
+    var card = document.createElement("div");
+    card.className = "case-card";
+    card.appendChild(Decor.createBloodDripBar());
+
+    var titel = document.createElement("h2");
+    titel.textContent = "Sag " + sag.id + ": " + sag.titel;
+    card.appendChild(titel);
+
+    var tekst = document.createElement("p");
+    tekst.textContent = sag.tekst;
+    card.appendChild(tekst);
+
+    var codeParts = renderCodeForm(sag, function () {
+      saveState(Logic.markSolved(state, sag.id));
+      render();
+    });
+    card.appendChild(codeParts.form);
+    card.appendChild(codeParts.feedback);
+    card.appendChild(renderHintBlock(sag));
+
+    root.appendChild(card);
+  }
+
+  function renderFinalePrompt() {
+    var sag = Gaader.FINALE;
+    var card = document.createElement("div");
+    card.className = "case-card finale-card";
+    card.appendChild(Decor.createBloodDripBar());
+
+    var titel = document.createElement("h2");
+    titel.textContent = sag.titel;
+    card.appendChild(titel);
+
+    var tekst = document.createElement("p");
+    tekst.textContent = sag.tekst;
+    card.appendChild(tekst);
+
+    var codeParts = renderCodeForm(sag, function () {
+      saveState(Logic.markSolved(state, sag.id));
+      render();
+    });
+    codeParts.form.querySelector("button").textContent = "Opklar sagen";
+    card.appendChild(codeParts.form);
+    card.appendChild(codeParts.feedback);
+    card.appendChild(renderHintBlock(sag));
+
+    root.appendChild(card);
+  }
+
+  function renderFinaleScreen() {
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    }
+    Decor.renderBalloons();
+    var card = document.createElement("div");
+    card.className = "case-card finale-solved";
+
+    var stamp = document.createElement("div");
+    stamp.className = "stamp";
+    stamp.textContent = "SAGEN ER OPKLARET";
+    card.appendChild(stamp);
+
+    var hilsen = document.createElement("p");
+    hilsen.textContent = Gaader.FINALE.hilsen;
+    card.appendChild(hilsen);
+
+    var stats = document.createElement("p");
+    stats.className = "stats";
+    var hintCount = state.hintsUsed.length;
+    stats.textContent =
+      "Samlet tid: " +
+      Logic.formatDuration(Logic.elapsedMs(state, Date.now())) +
+      " (inkl. " + hintCount + (hintCount === 1 ? " hint" : " hints") + ")";
+    card.appendChild(stats);
+
+    if (Gaader.FINALE.fysiskHenvisning) {
+      var henvisning = document.createElement("p");
+      henvisning.className = "physical-pointer";
+      henvisning.textContent = Gaader.FINALE.fysiskHenvisning;
+      card.appendChild(henvisning);
+    }
+
+    root.appendChild(card);
+  }
+
+  render();
+})();
