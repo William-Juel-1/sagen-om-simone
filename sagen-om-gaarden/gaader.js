@@ -50,7 +50,7 @@
       tekst: "Endnu et spørgsmål fra rejsedagbogen: hvor mange lande grænser op til landet på den anden side af broen? Sporet ligger, hvor hver eneste ferie starter -- ved den første kop om morgenen.",
       // Gemmested-forslag: ved kaffemaskinen i køkkenet.
       kode: "2",
-      hint: "Landet er Sverige. Sverige grænser op til Norge og Finland -- 2 lande.",
+      hint: "Landet er Sverige. Sverige grænser op til hvor mange lande?",
     },
   ];
 
@@ -59,7 +59,7 @@
     titel: "Sagen er ved at være opklaret",
     tekst: "Fem spor er fulgt. Nu mangler kun den sidste kode -- kælenavnet hun fik på grund af sit hår, tallet for hendes bælte-grad, og alderen hun fejrer i år, skrevet i træk uden mellemrum.",
     kode: "KRØLLE429",
-    hint: "Kælenavnet (krøllet hår) + 4 (hendes dan-grad) + 29 (alderen), skrevet i træk: KRØLLE429.",
+    hint: "Kælenavnet (hår-fald) + hendes dan-grad + hendes alder, skrevet i træk",
     hilsen: "TILLYKKE! Endnu en sag er opklaret -- og endnu en dag fejret med hele familien samlet.",
   };
 
