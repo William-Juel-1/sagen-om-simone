@@ -14,7 +14,7 @@
       tekst: "Mistænkte kan ikke gå forbi noget vådt uden at ville lære nogen at flyde. Hun låner gerne andres unger til en tur, som var de hendes egne. Spor hende til stedet i lejligheden, hvor vandet allerede venter.",
       // Gemmested-forslag: ved håndvasken eller badekarret.
       kode: "VANDHUND",
-      hint: "Tjek badeværelset. Hun var engang baby-svømningsinstruktør.",
+      hint: "Tænk på et kærligt dansk udtryk for én, der aldrig vil op af vandet.",
     },
     {
       id: 2,
@@ -23,7 +23,7 @@
       tekst: "Mistænkte hersker over sit eget lille imperium et sted mellem Aarhus og Randers, hvor der bliver solgt multi-maskiner. Hjemme regerer han bedst fra sin sofa.",
       // Gemmested-forslag: et bevis lagt nede i sofaen (mellem puderne/i sædet).
       kode: "ELITE SERVICE",
-      hint: "Tjek sofaen i stuen. Virksomheden hedder Elite Service.",
+      hint: "Virksomhedens navn beskriver både kvaliteten og det, han tilbyder sine kunder.",
     },
     {
       id: 3,
@@ -45,12 +45,12 @@
     },
     {
       id: 5,
-      rum: "Soveværelse",
+      rum: "Køkken",
       titel: "Sagen om nabolandene",
-      tekst: "Mistænkte hviler bedst under et dundyne et sted, hvor børnebøgerne om en rødhåret pige med overmenneskelig styrke, og en dreng fra Lønneberg, stadig står på reolen. Hvor mange nabolande deler dette land en landegrænse med?",
-      // Gemmested-forslag: den rigtige Astrid Lindgren-bog på bogreolen i soveværelset -- intet kort nødvendigt, bogen ER beviset.
+      tekst: "Endnu et spørgsmål fra rejsedagbogen: hvor mange lande grænser op til landet på den anden side af broen? Sporet ligger, hvor hver eneste ferie starter -- ved den første kop om morgenen.",
+      // Gemmested-forslag: ved kaffemaskinen i køkkenet.
       kode: "2",
-      hint: "Det er Sverige (tænk på Astrid Lindgren på bogreolen). Sverige grænser op til Norge og Finland -- 2 lande.",
+      hint: "Landet er Sverige. Sverige grænser op til Norge og Finland -- 2 lande.",
     },
   ];
 
@@ -59,7 +59,7 @@
     titel: "Sagen er ved at være opklaret",
     tekst: "Fem spor er fulgt. Nu mangler kun den sidste kode -- kælenavnet hun fik på grund af sit hår, tallet for hendes bælte-grad, og alderen hun fejrer i år, skrevet i træk uden mellemrum.",
     kode: "KRØLLE429",
-    hint: "Kælenavnet (krøllet hår) + 4 (hendes dan-grad) + 29 (alderen), skrevet i træk: KROLLE429.",
+    hint: "Kælenavnet (krøllet hår) + 4 (hendes dan-grad) + 29 (alderen), skrevet i træk: KRØLLE429.",
     hilsen: "TILLYKKE! Endnu en sag er opklaret -- og endnu en dag fejret med hele familien samlet.",
   };
 
