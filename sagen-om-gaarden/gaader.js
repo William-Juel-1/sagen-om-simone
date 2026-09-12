@@ -22,8 +22,8 @@
       titel: "Sagen om imperiet",
       tekst: "Mistænkte hersker over sit eget lille imperium et sted mellem Aarhus og Randers, hvor der bliver solgt multi-maskiner. Hjemme regerer han bedst fra sin sofa.",
       // Gemmested-forslag: et bevis lagt nede i sofaen (mellem puderne/i sædet).
-      kode: "REDSKAB",
-      hint: "Tjek sofaen i stuen. Han sælger multi-maskiner (redskabsbærere) fra sin virksomhed i Hornslet.",
+      kode: "ELITE SERVICE",
+      hint: "Tjek sofaen i stuen. Virksomheden hedder Elite Service.",
     },
     {
       id: 3,
