@@ -13,7 +13,7 @@
       titel: "Sagen om vandpigen",
       tekst: "Mistænkte kan ikke gå forbi noget vådt uden at ville lære nogen at flyde. Hun låner gerne andres unger til en tur, som var de hendes egne. Spor hende til stedet i lejligheden, hvor vandet allerede venter.",
       // Gemmested-forslag: ved håndvasken eller badekarret.
-      kode: "VANDBABY",
+      kode: "VANDHUND",
       hint: "Tjek badeværelset. Hun var engang baby-svømningsinstruktør.",
     },
     {
@@ -57,8 +57,8 @@
   var FINALE = {
     id: 6,
     titel: "Sagen er ved at være opklaret",
-    tekst: "Fem spor er fulgt. Nu mangler kun den sidste kode -- kælenavnet hun fik på grund af sit krøllede hår, tallet for hendes bælte-grad, og alderen hun fejrer i år, skrevet i træk uden mellemrum.",
-    kode: "KROLLE429",
+    tekst: "Fem spor er fulgt. Nu mangler kun den sidste kode -- kælenavnet hun fik på grund af sit hår, tallet for hendes bælte-grad, og alderen hun fejrer i år, skrevet i træk uden mellemrum.",
+    kode: "KRØLLE429",
     hint: "Kælenavnet (krøllet hår) + 4 (hendes dan-grad) + 29 (alderen), skrevet i træk: KROLLE429.",
     hilsen: "TILLYKKE! Endnu en sag er opklaret -- og endnu en dag fejret med hele familien samlet.",
   };
